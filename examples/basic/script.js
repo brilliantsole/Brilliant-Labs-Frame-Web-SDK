@@ -12,11 +12,17 @@ const disconnectButton = document.getElementById("disconnect");
 disconnectButton.addEventListener("click", () => {
   frame.disconnect();
 });
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", () => {
+  frame.reset();
+});
+
 function updateConnectButtons() {
   connectButton.disabled = frame.isConnected;
   disconnectButton.disabled = !frame.isConnected;
   runLuaButton.disabled = !frame.isConnected;
   textInput.disabled = !frame.isConnected;
+  resetButton.disabled = !frame.isConnected;
 }
 frame.addEventListener("connected", () => {
   updateConnectButtons();
@@ -132,6 +138,12 @@ const samples = {
   "write text": `frame.display.text('Hello world', 50, 100)`,
   "show text": `frame.display.show()`,
   "clear text": `frame.display.text(" ", 50, 100);frame.display.show()`,
+  "add tap listener": `function tapped()
+    print('tapped')
+end
+frame.imu.tap_callback(tapped)`,
+  "get pitch": "print(frame.imu.direction()['pitch'])",
+  "get roll": "print(frame.imu.direction()['roll'])",
 };
 Object.entries(samples).forEach(([label, script]) => {
   const sampleButton = document.createElement("button");
