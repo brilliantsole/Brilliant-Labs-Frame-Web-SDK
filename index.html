@@ -1,19 +1,14 @@
 <html>
   <head>
-    <title>Frame Web SDK | Brilliant Labs</title>
+    <title>Brilliant Labs Hackathon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <script src="./script.js" type="module"></script>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"
     />
   </head>
   <style>
-    label {
-      display: block;
-    }
     .github-fork-ribbon:before {
       background-color: #333;
     }
@@ -28,43 +23,12 @@
       >View on GitHub</a
     >
 
-    <h1>Frame Web SDK | Brilliant Labs</h1>
+    <h1>Brilliant Labs Frame Web SDK</h1>
 
-    <button id="connect">connect</button>
-    <button id="disconnect" disabled>disconnect</button>
+    <h2>Examples</h2>
 
-    <label>battery level: <span id="batteryLevel"></span></label>
-
-    <h2>Text Editor</h2>
-    <label>text: <input type="text" id="text" disabled /></label>
-    <label>
-      color:
-      <select id="textColor"></select>
-    </label>
-
-    <label>text x: <input type="range" min="1" max="640" id="textX" /> (<span id="textXSpan"></span>px)</label>
-    <label>text y: <input type="range" min="1" max="400" id="textY" /> (<span id="textYSpan"></span>px)</label>
-    <label>
-      spacing:
-      <input type="range" min="-100" max="100" id="textSpacing" />
-      (<span id="textSpacingSpan"></span>px)
-    </label>
-
-    <br />
-    <br />
-
-    <h2>script samples</h2>
-    <div id="samples"></div>
-
-    <h2>lua repl</h2>
-    <textarea id="lua" rows="5" cols="80"></textarea>
-    <button id="runLua" disabled>run lua</button>
-
-    <h2>responses</h2>
-    <button id="clear">clear history</button>
-    <div
-      id="responses"
-      style="display: flex; flex-direction: column-reverse; max-height: 300px; overflow-y: scroll"
-    ></div>
+    <ul>
+      <li><a href="examples/brilliantsole/basic">basic</a></li>
+    </ul>
   </body>
 </html>
