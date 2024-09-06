@@ -1,4 +1,4 @@
-import Frame from "./src/Frame.js";
+import Frame from "/src/Frame.js";
 
 const frame = new Frame();
 window.frame = frame;
